@@ -16,6 +16,7 @@ nodes = list(
             "id" : row["plaka"],
             "name" : neighbor["il"],
             "location" : { "lat" : row["lat"], "lon" : row["lon"] },
+            "numberOfNeighbors" : len(neighbor["komsular"]),
             "neighbors" : neighbor["komsular"],
             "idsOfNeighbors" : list(map( lambda n : ids[n] ,neighbor["komsular"])),
             "indexesOfNeighbors" : list(map( lambda n : ids[n] - 1,neighbor["komsular"])),
@@ -31,7 +32,6 @@ nodes = list(
         },neihgbors,rows
     )
 )
-
 with open("nodes.json", "w") as outfile:
     json.dump(obj= nodes, fp=outfile,ensure_ascii=False)
     
