@@ -1,0 +1,8 @@
+prefix=/home/mfglr/searchingAlgorithms/devel
+
+Name: searching_algorithms
+Description: Description of searching_algorithms
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
