@@ -17,5 +17,3 @@ for i in range(0,numberOfRows) :
 
 with open("positions.json", "w") as outfile:
     json.dump(obj= positions, fp=outfile,ensure_ascii=False)
-
-    
