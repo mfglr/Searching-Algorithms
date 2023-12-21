@@ -13,14 +13,10 @@ rows = json.load(jsonFileRows)
 nodes = list(
     map(
         lambda neighbor,row: {
-            "id" : row["plaka"],
-            "name" : neighbor["il"],
-            "location" : { "lat" : row["lat"], "lon" : row["lon"] },
-            "numberOfNeighbors" : len(neighbor["komsular"]),
-            "neighbors" : neighbor["komsular"],
-            "idsOfNeighbors" : list(map( lambda n : ids[n] ,neighbor["komsular"])),
-            "indexesOfNeighbors" : list(map( lambda n : ids[n] - 1,neighbor["komsular"])),
-            "costsOfMovingToNeighbors" : list(
+            "location":{"lat":row["lat"],"lon":row["lon"]},
+            "numberOfNeighbors":len(neighbor["komsular"]),
+            "indexesOfNeighbors":list(map(lambda n:ids[n] - 1,neighbor["komsular"])),
+            "costsOfMovingToNeighbors":list(
                 map(
                     lambda n :  math.sqrt(
                         pow( rows[ids[n] - 1]["lat"] - row["lat"], 2 ) + 
@@ -32,6 +28,8 @@ nodes = list(
         },neihgbors,rows
     )
 )
-with open("nodes.json", "w") as outfile:
-    json.dump(obj= nodes, fp=outfile,ensure_ascii=False)
+data = {"numberOfNodes":len(nodes),"nodes":nodes}
+
+with open("graph.json", "w") as outfile:
+    json.dump(obj= data, fp=outfile,ensure_ascii=False)
     

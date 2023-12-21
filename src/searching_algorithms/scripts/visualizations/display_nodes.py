@@ -5,8 +5,10 @@ plt.figure(figsize=(10,10))
 ax = plt.gca()
 ax.set_aspect('equal', adjustable='box')
 
-nodesFile = open("../data/nodes.json")
-nodes = json.load(nodesFile)
+graphFile = open("../data/graph.json")
+graph = json.load(graphFile)
+numberOfNodes = graph["numberOfNodes"]
+nodes = graph["nodes"]
 
 for i in range(0,len(nodes)) :
     node = nodes[i]
