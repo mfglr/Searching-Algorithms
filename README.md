@@ -22,11 +22,21 @@ If we consider each city of Turkey as a node, the resulting map will be as follo
 
 ![Screenshot from 2023-12-20 21-34-45](https://github.com/mfglr/Searching-Algorithms/assets/79373693/97714bc8-ae73-4291-a834-da75c3979255)
 
+<h2>astar algorithm</h2>
 
-ucs algorithm
+<code>
 start point : Bursa
 end point : Erzurum
+</code>
 
+https://github.com/mfglr/Searching-Algorithms/assets/79373693/6c5767ac-e0fd-4942-9f10-0e3e05261e02
+
+<h2>ucs algorithm</h2>
+
+<code>
+start point : Bursa
+end point : Erzurum
+</code>
 
 https://github.com/mfglr/Searching-Algorithms/assets/79373693/cc6d7246-a6c8-42c7-8099-2b9d5b64a96f
 
