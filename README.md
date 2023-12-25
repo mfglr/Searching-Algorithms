@@ -29,7 +29,9 @@ start point : Bursa
 end point : Erzurum
 </code>
 
+
 https://github.com/mfglr/Searching-Algorithms/assets/79373693/6c5767ac-e0fd-4942-9f10-0e3e05261e02
+
 
 <h2>ucs algorithm</h2>
 
@@ -37,6 +39,7 @@ https://github.com/mfglr/Searching-Algorithms/assets/79373693/6c5767ac-e0fd-4942
 start point : Bursa
 end point : Erzurum
 </code>
+
 
 https://github.com/mfglr/Searching-Algorithms/assets/79373693/cc6d7246-a6c8-42c7-8099-2b9d5b64a96f
 
