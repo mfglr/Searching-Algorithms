@@ -3,6 +3,9 @@
 
 searching_algorithms/CMakeFiles/ucs.dir/src/ucs.cpp.o
  /home/mfglr/searchingAlgorithms/devel/include/searching_algorithms/node_index.h
+ /home/mfglr/searchingAlgorithms/src/searching_algorithms/src/graph.h
+ /home/mfglr/searchingAlgorithms/src/searching_algorithms/src/location.h
+ /home/mfglr/searchingAlgorithms/src/searching_algorithms/src/node.h
  /home/mfglr/searchingAlgorithms/src/searching_algorithms/src/queue.h
  /home/mfglr/searchingAlgorithms/src/searching_algorithms/src/ucs.cpp
  /opt/ros/noetic/include/ros/advertise_options.h
