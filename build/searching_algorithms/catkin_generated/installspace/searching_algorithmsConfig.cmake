@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(searching_algorithms_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "include " STREQUAL " ")
   set(searching_algorithms_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/mfglr/searchingAlgorithms/install/lib;/home/mfglr/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/mfglr/searchingAlgorithms/install/lib;/home/mfglr/searchingAlgorithms/devel/lib;/home/mfglr/catkin_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(searching_algorithms_EXPORTED_TARGETS "")
+set(searching_algorithms_EXPORTED_TARGETS "searching_algorithms_generate_messages_cpp;searching_algorithms_generate_messages_eus;searching_algorithms_generate_messages_lisp;searching_algorithms_generate_messages_nodejs;searching_algorithms_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${searching_algorithms_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${searching_algorithms_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   _list_append_deduplicate(searching_algorithms_EXPORTED_TARGETS ${${searching_algorithms_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "searching_algorithms-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${searching_algorithms_DIR}/${extra})

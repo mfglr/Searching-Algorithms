@@ -13,6 +13,7 @@ rows = json.load(jsonFileRows)
 nodes = list(
     map(
         lambda neighbor,row: {
+            "name" : neighbor["il"],
             "location":{"lat":row["lat"],"lon":row["lon"]},
             "numberOfNeighbors":len(neighbor["komsular"]),
             "indexesOfNeighbors":list(map(lambda n:ids[n] - 1,neighbor["komsular"])),

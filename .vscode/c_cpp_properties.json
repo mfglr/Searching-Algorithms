@@ -7,11 +7,7 @@
       },
       "includePath": [
         "/opt/ros/noetic/include/**",
-        "/home/mfglr/catkin_ws/devel/include/**",
-        "/home/mfglr/catkin_ws/src/first_package/include/**",
-        "/home/mfglr/catkin_ws/src/turtlebot/include/**",
-        "/home/mfglr/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include/**",
-        "/home/mfglr/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/mfglr/searchingAlgorithms/devel/include/**",
         "/usr/include/**"
       ],
       "name": "ROS",
