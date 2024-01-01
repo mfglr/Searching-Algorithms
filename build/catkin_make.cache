@@ -1,2 +1,0 @@
-searching_algorithms
--DCATKIN_DEVEL_PREFIX=/home/mfglr/searchingAlgorithms/devel -DCMAKE_INSTALL_PREFIX=/home/mfglr/searchingAlgorithms/install -G Unix Makefiles

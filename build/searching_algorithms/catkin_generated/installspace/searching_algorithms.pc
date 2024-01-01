@@ -1,8 +1,0 @@
-prefix=/home/mfglr/searchingAlgorithms/install
-
-Name: searching_algorithms
-Description: Description of searching_algorithms
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: message_runtime

@@ -6,9 +6,10 @@
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
-        "/opt/ros/noetic/include/**",
-        "/home/mfglr/searchingAlgorithms/devel/include/**",
-        "/usr/include/**"
+        "/usr/include/**",
+        "/home/mfglr/searchingAlgorithms/src",
+        "/home/mfglr/searchingAlgorithms/src/graph_lib",
+        "/home/mfglr/searchingAlgorithms/src/algorithm_lib"
       ],
       "name": "ROS",
       "intelliSenseMode": "gcc-x64",

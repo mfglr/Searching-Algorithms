@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mfglr/searchingAlgorithms/build/CMakeFiles /home/mfglr/searchingAlgorithms/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/mfglr/searchingAlgorithms/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/mfglr/searchingAlgorithms/build/CMakeFiles /home/mfglr/searchingAlgorithms/build/app/CMakeFiles/progress.marks
+	cd /home/mfglr/searchingAlgorithms/build && $(MAKE) -f CMakeFiles/Makefile2 app/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mfglr/searchingAlgorithms/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/mfglr/searchingAlgorithms/build && $(MAKE) -f CMakeFiles/Makefile2 app/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,44 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/mfglr/searchingAlgorithms/build && $(MAKE) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/mfglr/searchingAlgorithms/build && $(MAKE) -f CMakeFiles/Makefile2 app/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/mfglr/searchingAlgorithms/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named source
+# Convenience name for target.
+app/CMakeFiles/main.dir/rule:
+	cd /home/mfglr/searchingAlgorithms/build && $(MAKE) -f CMakeFiles/Makefile2 app/CMakeFiles/main.dir/rule
+.PHONY : app/CMakeFiles/main.dir/rule
 
-# Build rule for target.
-source: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 source
-.PHONY : source
+# Convenience name for target.
+main: app/CMakeFiles/main.dir/rule
 
-# fast build rule for target.
-source/fast:
-	$(MAKE) -f src/CMakeFiles/source.dir/build.make src/CMakeFiles/source.dir/build
-.PHONY : source/fast
-
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
 .PHONY : main
 
 # fast build rule for target.
 main/fast:
-	$(MAKE) -f app/CMakeFiles/main.dir/build.make app/CMakeFiles/main.dir/build
+	cd /home/mfglr/searchingAlgorithms/build && $(MAKE) -f app/CMakeFiles/main.dir/build.make app/CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/mfglr/searchingAlgorithms/build && $(MAKE) -f app/CMakeFiles/main.dir/build.make app/CMakeFiles/main.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/mfglr/searchingAlgorithms/build && $(MAKE) -f app/CMakeFiles/main.dir/build.make app/CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/mfglr/searchingAlgorithms/build && $(MAKE) -f app/CMakeFiles/main.dir/build.make app/CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -144,8 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... source"
 	@echo "... main"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -157,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/mfglr/searchingAlgorithms/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

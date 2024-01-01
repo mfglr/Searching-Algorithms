@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/algorithm.h
+list
+-
+graph.h
+../src/graph.h
+queue.h
+../src/queue.h
+
+../src/graph.h
+node.h
+../src/node.h
+
+../src/location.h
+
+../src/node.h
+location.h
+../src/location.h
+
+../src/queue.h
+stdlib.h
+-
+
+/home/mfglr/searchingAlgorithms/app/main.cpp
+graph.h
+/home/mfglr/searchingAlgorithms/app/graph.h
+algorithm.h
+/home/mfglr/searchingAlgorithms/app/algorithm.h
+stdio.h
+-
+list
+-
+
