@@ -81,7 +81,7 @@
     int main(int argc, char const *argv[])
     {
     
-        // read the graph file to save into memory
+        // read the graph file to save it into memory
         Graph *graph = new Graph();
         graph->readJsonFile("graphs/graph.json");
         
