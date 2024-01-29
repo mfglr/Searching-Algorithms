@@ -70,10 +70,11 @@
 <h1>An Example</h1>
 
 <code>
+    
     #include "graph.h"
     #include "algorithm.h"
-    #include <stdio.h>
-    #include <list>
+    #include &lt;stdio.h&gt;
+    #include &lt;list&gt;
     
     using namespace searching_algorithms;
     using namespace std;
